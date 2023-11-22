@@ -6,9 +6,10 @@
     <title>Machine Learning</title>
 </head>
 <body>
-    <form action="{{url_for{predict}}}" method="post">
+    <form action="{{url_for('predict')}}" method="post">
         <input type="text" name="temperature" placeholder="Enter Temperature: "></input>
         <button type="submit">Predict</button>
     </form>
+    <h3><br>{{prediction_text}}</h3>
 </body>
 </html>
