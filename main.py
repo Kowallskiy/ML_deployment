@@ -10,8 +10,7 @@ def index():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    prediction = model.predict(request.form.get('temperature'))
-    print(prediction)
+    prediction = model.predict([[request.form.get('temperature')]])
     return render_template('index.html', prediction_text=f"Heart Disease: {prediction}") 
 
 if __name__ == '__main__':
